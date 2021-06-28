@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<body style="background-color:black;">
+<h1 id="event" style="color:white;font-size:1000%;">8</h1>
+</body>
+
+<script src="https://unpkg.com/tone"></script>
+<script>
+const synth = new Tone.Synth().toMaster()
+setInterval(function(){
+	synth.triggerAttackRelease(Math.floor(Math.random()*800+200), '8n')
+	document.getElementById("event").innerHTML = (Math.floor((Math.random()*100)+1)).toString();
+
+ }, 100);
+</script>
+
+</html>
